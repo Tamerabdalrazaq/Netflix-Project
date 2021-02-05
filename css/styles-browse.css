@@ -1,0 +1,314 @@
+@font-face{
+    src: url('../font/Roboto-Thin.ttf');
+    font-family: roboto-thin;
+}
+@font-face{
+    src: url('../font/Roboto-Regular.ttf');
+    font-family: roboto-regular;
+}
+@font-face{
+    src: url('../font/Roboto-Medium.ttf');
+    font-family: roboto-medium;
+}
+
+
+:root{
+    --navbar-color: rgba(0, 0, 0, 0.1);
+    --main-color: rgb(20,20,20);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: roboto-regular;;
+    line-height: 1.4;
+    letter-spacing: 0.1rem;
+}
+
+.dark-bg{
+    background: var(--main-color);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    text-decoration: none;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    padding: 1.2rem 3rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: roboto-medium;
+    margin-right: 1rem;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn-light{
+    background-color: #fff;
+    color: #111111;   
+}
+
+.btn-light:hover{
+    background-color: rgb(255, 0, 0);
+    opacity: .85;
+}
+
+.btn-grey{
+    background-color: rgb(131, 131, 131);
+    color: #f1f1f1;  
+}
+
+.btn-grey:hover{
+    opacity: 0;
+}
+
+/* NAVBAR */
+nav{
+    width: 100vw;
+    height: 63px;
+    background-image: linear-gradient(to top, transparent, rgb(34, 34, 34));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    color: rgb(224, 224, 224);
+    font-size: 1.4rem;
+    font-family: roboto-regular;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+nav .left{
+    display: flex;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+nav .right{
+    margin-right: 3vw;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+nav .logo{
+    width: 92.5px;
+    height: 30px;
+    margin-right: 3rem;
+}
+
+nav .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position:50% 50%;
+}
+
+nav li{
+    margin: 0 1.4rem 0 1.4rem;
+}
+
+
+/* TV PREVIEW */
+
+.tv-preview{
+    width: 100%;
+    height: 100vh;
+    background: url('../imgs/browse/our-planet-static.jpg') no-repeat center center/cover;
+    display: flex;
+    box-shadow:inset 0px -50px 800px 20px #0f0f0f;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.tv-preview .left-container{
+    align-self: center;
+    width: 40%;
+    height: 70%;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 0;
+}
+
+.tv-preview .left-container .watermark{
+    height: 18rem;
+    width: 48rem;
+}
+
+.tv-preview .left-container img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position:50% 50%;
+}
+
+.tv-preview .left-container p{
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 2rem 0 2rem 0;
+}
+
+/* BROWSE GALLERY */
+
+.browse{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.browse .container{
+    width: 100%;
+}
+
+.browse .container .browse-row{
+    width: 100%;
+    height: 25vh;
+    padding-left: 6rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.browse .container .browse-row .title{
+    height: 18%;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.browse .container .browse-row .gallery{
+    display: flex;
+    justify-content: flex-start;
+    height: 75%;
+    width:fit-content;
+}
+
+.browse .container .browse-row .gallery .box{
+    height: 100%;
+    width: 23.5rem;
+    margin-right: 0.75rem;
+    border-radius: .4rem;
+    transition: transform 0.5s;
+}
+
+.browse .container .browse-row .gallery .box:hover{
+    transform: scale(1.5);
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 70vw;
+    margin: 4rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+footer .cont{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.3rem;
+}
+
+
+footer .cont h4{
+    margin: 1.5rem 0 0 0;
+    font-family: roboto-regular;
+}
+
+footer  i{
+    color: #777;
+    margin: 0 1.5rem 0 0;
+    font-size: 2.8rem;
+}
+
+footer button{
+    border: 1px solid #777;
+    border-radius: 0;
+    background-color: transparent;
+    color: #777;
+    padding: .6rem 1.6rem;
+    font-size: 1.3rem;
+    margin:none;
+    margin: 2rem 0 2rem 0;
+}
+
+footer button:hover{
+    color: #fff;
+}
+
+footer i:hover, footer h4:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+.box.prison-break{
+    background: url('../imgs/browse/gallery/TV-Shows/prison-break.jpg') no-repeat center center/cover;
+}
+.box.money-heist{
+    background: url('../imgs/browse/gallery/TV-Shows/money-heist.jpg') no-repeat center center/cover;
+}
+.box.suits{
+    background: url('../imgs/browse/gallery/TV-Shows/suits.jpg') no-repeat center center/cover;
+}
+.box.vikings{
+    background: url('../imgs/browse/gallery/TV-Shows/vikings.jpg') no-repeat center center/cover;
+}
+.box.bridgerton{
+    background: url('../imgs/browse/gallery/TV-Shows/bridgerton.jpg') no-repeat center center/cover;
+}
+.box.designated-survivor{
+    background: url('../imgs/browse/gallery/TV-Shows/designated-survivor.jpg') no-repeat center center/cover;
+}
+
+.box.our-planet{
+    background: url('../imgs/browse/gallery/Continue-Watching/our-planet.jpg') no-repeat center center/cover;
+}
+.box.heroes{
+    background: url('../imgs/browse/gallery/Continue-Watching/we-can-be-heroes.jpg') no-repeat center center/cover;
+}
+.box.black-list{
+    background: url('../imgs/browse/gallery/Continue-Watching/black-list.jpg') no-repeat center center/cover;
+}
+.box.lupin{
+    background: url('../imgs/browse/gallery/Continue-Watching/lupin.jpg') no-repeat center center/cover;
+}
+.box.taare{
+    background: url('../imgs/browse/gallery/Continue-Watching/taare.jpg') no-repeat center center/cover;
+}
+.box.lucifer{
+    background: url('../imgs/browse/gallery/trending-now/lucifer.jpg') no-repeat center center/cover;
+}
+.box.shtisel{
+    background: url('../imgs/browse/gallery/trending-now/shtisel.jpg') no-repeat center center/cover;
+}
