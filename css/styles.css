@@ -84,19 +84,19 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 62vw;
+    width: 58vw;
     margin: 3rem 0 3rem 0;
 }
 
 .container .box-container .element{
-    width: 11vw;
+    width: 10vw;
     height: 28rem;
 }
 
 .container .box-container .box{
-    width: 11vw;
-    height: 11vw;
-    border-radius: .7rem;
+    width: 10vw;
+    height: 10vw;
+    border-radius: .5rem;
 }
 
 .container a{
@@ -121,6 +121,21 @@ main{
     padding: 1rem 0 2rem 0;
 }
 
+.manage-profiles{
+    padding: 0.7rem 2.7rem;
+    background-color: transparent;
+    border: 0.1rem rgb(115, 115, 115) solid;
+    color: rgb(115, 115, 115);
+    letter-spacing: 0.15rem;
+    font-size: 2rem;
+}
+
+.manage-profiles:hover{
+    color: #fff;
+    border-color: #Fff;
+    cursor: pointer;
+}
+
 .container .box1{
     background: url('../imgs/profile-lacasa.png') no-repeat center center/cover;
 }
@@ -135,19 +150,4 @@ main{
 }
 .container .box5{
     background: url('../imgs/profile-kids.png') no-repeat center center/cover;
-}
-
-.manage-profiles{
-    padding: 0.7rem 2.7rem;
-    background-color: transparent;
-    border: 0.1rem rgb(115, 115, 115) solid;
-    color: rgb(115, 115, 115);
-    letter-spacing: 0.15rem;
-    font-size: 2rem;
-}
-
-.manage-profiles:hover{
-    color: #fff;
-    border-color: #Fff;
-    cursor: pointer;
 }
